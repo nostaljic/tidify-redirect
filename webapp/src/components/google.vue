@@ -7,7 +7,12 @@
 <script>
 export default {
   created() {
-    window.location.href = 'http://118.67.130.242:8888/auth/google/callback';
+    // console.log(this.$route.query);
+    // var parameters = this.$route.fullpath;
+    // console.log('[GOOGLE]', document.cookie, parameters);
+    window.location.href =
+      'http://118.67.130.242:8888/auth/google/callback' +
+      window.location.search;
   },
 };
 </script>
